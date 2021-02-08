@@ -12,3 +12,14 @@ I love sports and I only support ny teams across all leagues. I figured out that
 - The app will show the score and details of a particular ny team 
 - The app will have a recap video of the game if available
 - Search bar to search infos for a particular ny team
+
+## Wireframe
+
+![alt text](https://wireframe.cc/HGPzD3)
+
+## Implementation Timeline
+- Day 1: Research for an API and 
+- Day 2
+- Day 3
+- Day 4
+- Day 5
