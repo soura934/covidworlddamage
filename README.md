@@ -18,8 +18,8 @@ I love sports and I only support ny teams across all leagues. I figured out that
 ![alt text](https://wireframe.cc/HGPzD3)
 
 ## Implementation Timeline
-- Day 1: Research for an API and 
-- Day 2
-- Day 3
-- Day 4
-- Day 5
+- Day 1: Research for an API and probably more technology to use like canvas
+- Day 2: Render the boxes that contain each teams info
+- Day 3: Make sure each box will give more info on a click
+- Day 4: Go over the functionality of the app and if more is needed
+- Day 5: Styling fix bugs

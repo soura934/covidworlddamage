@@ -36,5 +36,13 @@
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0",
     "webpack-merge": "^4.2.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/soura934/nyteams.git"
+  },
+  "bugs": {
+    "url": "https://github.com/soura934/nyteams/issues"
+  },
+  "homepage": "https://github.com/soura934/nyteams#readme"
 }
