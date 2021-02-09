@@ -15,7 +15,7 @@ I love sports and I only support ny teams across all leagues. I figured out that
 
 ## Wireframe
 
-![alt text](https://wireframe.cc/HGPzD3)
+![alt text](https://github.com/soura934/nyteams/blob/master/src/images/Screenshot%202021-02-08%20174638.png)
 
 ## Implementation Timeline
 - Day 1: Research for an API and probably more technology to use like canvas
