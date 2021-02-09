@@ -1,7 +1,7 @@
 # NYteams
 
-## Background
-I love sports and I only support ny teams across all leagues. I figured out that it would be great idea if I and my fellow ny fans have one place where we can have a specific site to show the score and result of any ny team game.
+## Background 
+We are living in a difficult time where the pandemic has changed our life. I figured out that it would be a great idea if I and my fellow newyorkers have a specific site to provide helpful info during this covid era.
 
 ## Technologies
 - Vanilla JavaScript
@@ -9,17 +9,17 @@ I love sports and I only support ny teams across all leagues. I figured out that
 - Webpack to bundle
 
 ## Functionality & MVP
-- The app will show the score and details of a particular ny team 
-- The app will have a recap video of the game if available
-- Search bar to search infos for a particular ny team
+- The app will show the covid stats of each borough
+- The app will have nyc news regarding covid
+- The app will provide helpful link to navigate
 
 ## Wireframe
 
-![alt text](https://github.com/soura934/nyteams/blob/master/src/images/Screenshot%202021-02-08%20174638.png)
+![alt text](https://github.com/soura934/nyteams/blob/master/src/images/Wireframe.png)
 
 ## Implementation Timeline
-- Day 1: Research for an API and probably more technology to use like canvas
-- Day 2: Render the boxes that contain each teams info
+- Day 1: Research for an API and probably more technology to use like D3.js
+- Day 2: Render the boxes that contain each borough info
 - Day 3: Make sure each box will give more info on a click
 - Day 4: Go over the functionality of the app and if more is needed
 - Day 5: Styling fix bugs
