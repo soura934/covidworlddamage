@@ -1,0 +1,37 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #230820;
+    font-family: 'Poppins', sans-serif;
+}
+h1 {
+    margin-top: 10%;
+    /* margin-bottom: 2%; */
+    color: white;
+    display: flex;
+    justify-content: center;   
+    flex-direction: column;
+    align-items: center;
+}
+.main {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height:200px;;
+}
+input {
+    height: 25px;
+    width: 250px;
+}
+
+button {
+    height: 25px;
+    width: 50px;
+}
+/* input, button {
+    border: none;
+} */
