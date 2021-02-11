@@ -1,4 +1,4 @@
-# NYteams
+# Covid Stats
 
 ## Background 
 We are living in a difficult time where the pandemic has changed our life. I figured out that it would be a great idea if I and my fellow newyorkers have a specific site to provide helpful info during this covid era.
