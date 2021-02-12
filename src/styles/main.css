@@ -21,6 +21,7 @@ h1 {
     align-items: center;
     display: flex;
     justify-content: center;
+    position: relative;
     
 }
 input {
@@ -29,10 +30,14 @@ input {
     padding-left: 5px;
     border: none;
     outline: none;
-    
+    border: none;
+    background: white;
+    border: none;
+    outline: none;
+    font-size: inherit;
 }
 
-button {
+/* button {
     height: 25px;
     width: 50px;
 }
@@ -46,18 +51,9 @@ button{
 button:hover {
     background: #230820;
     color: white;
-}
-input, button {
-    border: none;
-    background: white;
-    border: none;
-    outline: none;
-
-}
-
-/* .search-countries {
-    position: inherit;
 } */
+
+
 .list-countries {
     position: absolute;
     height: 200px;
@@ -65,15 +61,21 @@ input, button {
     border: none;
     outline: none;
     background-color: white;
-    /* flex-direction: column;
+    flex-direction: column;
     align-items: flex-start;
-    display: flex; */
-    top: 225px;
+    display: flex;
+    top: 25px;
     overflow-y: scroll;
-    margin-right: 4.25%;
+    /* margin-right: 4.25%; */
 }
+
 
 .list-countries ul li{
     list-style: none;
     cursor: pointer;
+    padding: 5px
+}
+
+.hide {
+    display: none;
 }
