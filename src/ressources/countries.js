@@ -1,4 +1,4 @@
- export let listOfCountries = [
+ let listOfCountries = [
     { name: 'USA', code: 'US' },
     { name: 'Spain', code: 'ES' },
     { name: 'Italy', code: 'IT' },

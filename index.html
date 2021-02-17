@@ -10,17 +10,50 @@
     <link rel="stylesheet" href="./src/styles/main.css" />
     <title>CovidStats</title>
   </head>
-
+  
   <body>
     <script src="./dist/main.js"></script>
+    <script
+      language="JavaScript"
+      src="http://www.geoplugin.net/javascript.gp"
+      type="text/javascript"
+    ></script>
+    
     <h1 id="Title">Word Covid-Stats</h1>
-    <div class="search-countries">
-      <div class="box">
-          <input id="search-field" type="text" placeholder="Country">
-          <!-- <button class="search-button" type="submit"><i class="fa fa-search"></i></button> -->
+      <div class="all-stats">
+        <div report>
+          <div countries>
+            <div class="name">name</div>
+          <div class="search-countries">
+            <div class="box">
+                <input id="search-field" type="text" placeholder="Country">
+                <!-- <button class="search-button" type="submit"><i class="fa fa-search"></i></button> -->
+            </div>
+            <div class="list-countries ">
+            </div>
+          </div>
+        </div>
+          <div class="cases">
+            <div class="title">Total Cases</div>
+            <div class="number">0</div>
+            <div class="new-number">+0</div>
+          </div>
+          <div class="death">
+            <div class="title">Deaths</div>
+            <div class="number">0</div>
+            <div class="new-number">+0</div>
+          </div>
+          <div class="recover">
+            <div class="title">Recovered</div>
+            <div class="number">0</div>
+            <div class="new-number">+0</div>
+          </div>
       </div>
-      <div class="list-countries ">
+      <div class="chart">
+        <canvas id="graph"></canvas>
       </div>
     </div>
+    <script src="./src/ressources/countries.js"></script>
+    <script src="./src/ressources/api.js"></script>
   </body>
 </html>
