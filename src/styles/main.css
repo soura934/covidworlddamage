@@ -79,3 +79,9 @@ button:hover {
 .hide {
     display: none;
 }
+
+.cases, .death, .recover, .name{
+    font-family: 'Poppins', sans-serif;
+    padding-left: 10%;
+    color: white;
+}
