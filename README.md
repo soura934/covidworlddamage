@@ -1,7 +1,7 @@
 # Covid Stats
 
 ## Background 
-We are living in a difficult time where the pandemic has changed our life. I figured out that it would be a great idea if we have a specific site to provide helpful info during this covid era.
+World Covid Stats is an app that shows the number of damage caused by covid around the word.
 
 ## Technologies
 - Vanilla JavaScript
@@ -11,7 +11,7 @@ We are living in a difficult time where the pandemic has changed our life. I fig
 ## Functionality & MVP
 - The app will show the covid stats of each country of the world
 - The app will have a graph that shows the number of death 
-- The app will provide the number of people who recover around the world
+- The app will provide the number of people who recover from covid around the world
 
 ## Wireframe
 
