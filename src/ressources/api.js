@@ -57,7 +57,7 @@ function updateHTML(){
 
 function updateNumbers(){
     nameOfCountry.innerHTML = displayCountry;
-    casesOfCountry.innerHTML = cases;
-    recoverOfCountry.innerHTML = recovered
-    deathOfCountry.innerHTML = deaths;
+    casesOfCountry.innerHTML = cases.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    recoverOfCountry.innerHTML = recovered.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+    deathOfCountry.innerHTML = deaths.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
