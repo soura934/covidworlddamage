@@ -82,7 +82,7 @@ button:hover {
 
 .cases, .death, .recover, .name{
     font-family: 'Poppins', sans-serif;
-    padding-left: 5%;
+    margin-left: 10%;
     color: white;
     margin-top: 25px;
 }
