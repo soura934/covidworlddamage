@@ -1,15 +1,11 @@
 
 
-console.log('hello');
+
 const nameOfCountry = document.querySelector(".name");
 const casesOfCountry = document.querySelector(".cases .number");
-const newCasesOfCountry = document.querySelector(".cases .new-number");
 const deathOfCountry = document.querySelector(".death .number");
-const newDeathOfCountry = document.querySelector(".death .new-number");
 const recoverOfCountry = document.querySelector(".recover .number");
-const newRecoverOfCountry = document.querySelector(".recover .new-number");
 
-// const ctx = document.getElementById("graph").getContext("2d");
 
 let dataApp,
     cases ,
@@ -35,7 +31,7 @@ function fetchData(countryName){
         return response.json();
     }).then(data => {
         // console.log(data.cases, data.country);
-        console.log(data);
+        // console.log(data);
         // // all = Object.keys(data)
         cases = data.cases;
         deaths = data.deaths;
@@ -52,7 +48,6 @@ fetchData(countryName);
 
 function updateHTML(){
     updateNumbers();
-    // updateChart();
 }
 
 function updateNumbers(){

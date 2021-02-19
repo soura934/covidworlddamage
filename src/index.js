@@ -2,8 +2,6 @@
 
 
 document.addEventListener("DOMContentLoaded",() => {
-// window.api.js = api.js;
-    const searchCountriesEle = document.querySelector(".search-countries");
     const searchField = document.getElementById("search-field");
     const listCountries = document.querySelector(".list-countries");
     function createList(){
@@ -28,6 +26,7 @@ document.addEventListener("DOMContentLoaded",() => {
     createList();
 
     listCountries.addEventListener("click", function(){
+        searchField.value = "";
         listCountries.classList.toggle("hide");
     })
 
