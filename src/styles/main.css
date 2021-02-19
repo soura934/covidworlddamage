@@ -95,7 +95,7 @@ footer {
 .personal-sites a img {
     width: 30px;
 }
-.personal-div a img:hover {
+.personal-sites a img:hover {
     filter: hue-rotate(180deg);
 }
 .personal-sites {
