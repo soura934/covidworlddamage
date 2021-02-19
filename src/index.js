@@ -4,6 +4,10 @@
 document.addEventListener("DOMContentLoaded",() => {
     const searchField = document.getElementById("search-field");
     const listCountries = document.querySelector(".list-countries");
+    const casesEle = document.querySelector(".cases");
+    const deathEle = document.querySelector(".death");
+    const recoverEle = document.querySelector(".recover");
+
     function createList(){
         const numberOfCountries = listOfCountries.length;
 
@@ -28,6 +32,10 @@ document.addEventListener("DOMContentLoaded",() => {
     listCountries.addEventListener("click", function(){
         searchField.value = "";
         listCountries.classList.toggle("hide");
+        nameOfCountry.classList.remove("hide");
+        casesEle.classList.remove("hide");
+        deathEle.classList.remove("hide");
+        recoverEle.classList.remove("hide");        
     })
 
     

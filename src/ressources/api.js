@@ -15,12 +15,10 @@ let dataApp,
     date;
 
 
-let codeOfCountry = geoplugin_countryCode();
+
 let countryName;
 listOfCountries.forEach( country => {
-    if (country.code == codeOfCountry) {
         countryName = country.name;
-    }
 });
 
 

@@ -20,7 +20,7 @@
       <div class="all-stats">
         <div report>
           <div countries>
-            <div class="name">Country</div>
+            <div class="name hide">Country</div>
           <div class="search-countries">
             <div class="box">
                 <input id="search-field" type="text" placeholder="Country">
@@ -30,15 +30,15 @@
             </div>
           </div>
         </div>
-          <div class="cases">
+          <div class="cases hide">
             <div class="title">Total Cases</div>
             <div class="number">0</div>
           </div>
-          <div class="death">
+          <div class="death hide">
             <div class="title">Deaths</div>
             <div class="number">0</div>
           </div>
-          <div class="recover">
+          <div class="recover hide">
             <div class="title">Recovered</div>
             <div class="number">0</div>
           </div>
@@ -47,11 +47,6 @@
         <canvas id="graph"></canvas>
       </div>
     </div>
-    <script
-      language="JavaScript"
-      src="http://www.geoplugin.net/javascript.gp"
-      type="text/javascript"
-    ></script>
     <script src="./src/ressources/countries.js"></script>
     <script src="./src/ressources/api.js"></script>
   </body>
