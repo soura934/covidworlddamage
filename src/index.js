@@ -43,6 +43,9 @@ document.addEventListener("DOMContentLoaded",() => {
         listCountries.classList.remove("hide");
     })
     searchField.addEventListener("input", function(){
+        if (searchField.value === "") {
+            listCountries.classList.toggle("hide");
+        }
         let value = searchField.value.toUpperCase();
     
         listOfCountries.forEach(country => {
