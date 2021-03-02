@@ -5,7 +5,7 @@ const nameOfCountry = document.querySelector(".name");
 const casesOfCountry = document.querySelector(".cases .number");
 const deathOfCountry = document.querySelector(".death .number");
 const recoverOfCountry = document.querySelector(".recover .number");
-
+const ctx = document.getElementById("graph").getContext("2d");
 
 let dataApp,
     cases ,
@@ -46,6 +46,7 @@ fetchData(countryName);
 
 function updateHTML(){
     updateNumbers();
+    updateChart();
 }
 
 function updateNumbers(){
@@ -53,4 +54,22 @@ function updateNumbers(){
     casesOfCountry.innerHTML = cases.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     recoverOfCountry.innerHTML = recovered.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
     deathOfCountry.innerHTML = deaths.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
+let chart;
+function updateChart() {
+    chart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            datasets: [{
+                label: 'First dataset',
+                data: [0, 20, 40, 50]
+            }],
+            labels: ['January', 'February', 'March', 'April']
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false
+        }
+    });
 }
