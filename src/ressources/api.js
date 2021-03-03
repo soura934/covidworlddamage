@@ -1,6 +1,5 @@
 
 
-
 const nameOfCountry = document.querySelector(".name");
 const casesOfCountry = document.querySelector(".cases .number");
 const deathOfCountry = document.querySelector(".death .number");
@@ -29,12 +28,14 @@ function fetchData(countryName){
         return response.json();
     }).then(data => {
         // console.log(data.cases, data.country);
-        // console.log(data);
-        // // all = Object.keys(data)
+        console.log(new Date(data.updated));
+        // all = Object.keys(data)
         cases = data.cases;
         deaths = data.deaths;
         recovered = data.recovered
         displayCountry = data.country;
+        date = data.updated
+
     }).then( () => {
         updateHTML();
     }).catch( error => {
@@ -63,9 +64,9 @@ function updateChart() {
         data: {
             datasets: [{
                 label: 'First dataset',
-                data: [0, 20, 40, 50]
+                data: 0
             }],
-            labels: ['January', 'February', 'March', 'April']
+            labels: 0,
         },
         options: {
             responsive: true,
