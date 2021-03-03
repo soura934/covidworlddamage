@@ -27,14 +27,11 @@ function fetchData(countryName){
 	}).then(response => {
         return response.json();
     }).then(data => {
-        // console.log(data.cases, data.country);
-        console.log(new Date(data.updated));
-        // all = Object.keys(data)
+        console.log(data);
         cases = data.cases;
         deaths = data.deaths;
         recovered = data.recovered
         displayCountry = data.country;
-        date = data.updated
 
     }).then( () => {
         updateHTML();
@@ -47,7 +44,7 @@ fetchData(countryName);
 
 function updateHTML(){
     updateNumbers();
-    updateChart();
+    // updateChart();
 }
 
 function updateNumbers(){
@@ -57,20 +54,20 @@ function updateNumbers(){
     deathOfCountry.innerHTML = deaths.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
-let chart;
-function updateChart() {
-    chart = new Chart(ctx, {
-        type: 'line',
-        data: {
-            datasets: [{
-                label: 'First dataset',
-                data: 0
-            }],
-            labels: 0,
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false
-        }
-    });
-}
+// let chart;
+// function updateChart() {
+//     chart = new Chart(ctx, {
+//         type: 'line',
+//         data: {
+//             datasets: [{
+//                 label: 'First dataset',
+//                 data: 0
+//             }],
+//             labels: 0,
+//         },
+//         options: {
+//             responsive: true,
+//             maintainAspectRatio: false
+//         }
+//     });
+// }
