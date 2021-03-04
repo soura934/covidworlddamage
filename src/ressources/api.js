@@ -29,8 +29,6 @@ function fetchData(countryName){
 	}).then(response => {
         return response.json();
     }).then(data => {
-        console.log(data);
-        console.log(data.countryInfo.flag);
         cases = data.cases;
         deaths = data.deaths;
         recovered = data.recovered
@@ -48,7 +46,6 @@ fetchData(countryName);
 
 function updateHTML(){
     updateNumbers();
-    // updateChart();
 }
 
 function updateNumbers(){

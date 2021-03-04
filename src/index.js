@@ -1,5 +1,3 @@
-// import {listOfCountries} from './ressources/countries';
-
 
 document.addEventListener("DOMContentLoaded",() => {
     const searchField = document.getElementById("search-field");
