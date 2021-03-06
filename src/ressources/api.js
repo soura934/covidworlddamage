@@ -65,8 +65,11 @@ function updateChart() {
         type: 'line',
         data: {
             datasets: [{
-                label: 'First dataset',
-                data: 0,
+                label: 'Total Cases',
+                data: cases.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","),
+                fill: false,
+                borderColor: 'white',
+                backgroundColor:'white'
             }],
             labels: 0,
         },
