@@ -29,6 +29,7 @@ function fetchData(countryName){
 	}).then(response => {
         return response.json();
     }).then(data => {
+        console.log(data);
         cases = data.cases;
         deaths = data.deaths;
         recovered = data.recovered
@@ -46,6 +47,7 @@ fetchData(countryName);
 
 function updateHTML(){
     updateNumbers();
+    updateChart();
 }
 
 function updateNumbers(){
@@ -57,20 +59,20 @@ function updateNumbers(){
 
 }
 
-// let chart;
-// function updateChart() {
-//     chart = new Chart(ctx, {
-//         type: 'line',
-//         data: {
-//             datasets: [{
-//                 label: 'First dataset',
-//                 data: 0
-//             }],
-//             labels: 0,
-//         },
-//         options: {
-//             responsive: true,
-//             maintainAspectRatio: false
-//         }
-//     });
-// }
+let chart;
+function updateChart() {
+    chart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            datasets: [{
+                label: 'First dataset',
+                data: 0,
+            }],
+            labels: 0,
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false
+        }
+    });
+}
