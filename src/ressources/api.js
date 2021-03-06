@@ -13,7 +13,8 @@ let dataApp,
     recovered,
     deaths,
     date,
-    flagUrl;
+    flagUrl,
+    population;
 
 
 
@@ -35,6 +36,7 @@ function fetchData(countryName){
         recovered = data.recovered
         displayCountry = data.country;
         flagUrl = data.countryInfo.flag;
+        population = data.population;
 
     }).then( () => {
         updateHTML();
@@ -66,12 +68,13 @@ function updateChart() {
         data: {
             datasets: [{
                 label: 'Total Cases',
-                data: cases.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","),
+                data: cases.toString(),
                 fill: false,
                 borderColor: 'white',
-                backgroundColor:'white'
+                backgroundColor:'white',
+                borderWidth: 1
             }],
-            labels: 0,
+            labels: population.toString(),
         },
         options: {
             responsive: true,
