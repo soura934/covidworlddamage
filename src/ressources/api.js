@@ -73,6 +73,22 @@ function updateChart() {
                 borderColor: 'white',
                 backgroundColor:'white',
                 borderWidth: 1
+            },
+            {
+                label: 'Recovered',
+                data: recovered.toString(),
+                fill: false,
+                borderColor: 'green',
+                backgroundColor:'green',
+                borderWidth: 1
+            },
+            {
+                label: 'Death',
+                data: deaths.toString(),
+                fill: false,
+                borderColor: 'red',
+                backgroundColor:'red',
+                borderWidth: 1
             }],
             labels: population.toString(),
         },
