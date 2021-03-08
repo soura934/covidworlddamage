@@ -57,7 +57,7 @@ function updateNumbers(){
     casesOfCountry.innerHTML = cases.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     recoverOfCountry.innerHTML = recovered.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
     deathOfCountry.innerHTML = deaths.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-    flagOfCountry.innerHTML = `<img src="${flagUrl}"></img>`;
+    // flagOfCountry.innerHTML = `<img src="${flagUrl}"></img>`;
 
 }
 
