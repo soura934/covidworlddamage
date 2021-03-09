@@ -7,14 +7,14 @@ const recoverOfCountry = document.querySelector(".recover .number");
 const flagOfCountry = document.getElementById("flag");
 // const ctx = document.getElementById("graph").getContext("2d");
 
-let dataApp,
-    cases ,
-    displayCountry,
-    recovered,
-    deaths,
-    date,
-    flagUrl,
-    population;
+let dataApp = [],
+    cases = [],
+    displayCountry = [],
+    recovered = [],
+    deaths = [],
+    date = [],
+    // flagUrl = [],
+    population = [];
 
 
 
@@ -31,7 +31,9 @@ function fetchData(countryName){
         return response.json();
     }).then(data => {
         console.log(data);
-        cases = data.cases;
+        console.log(data.timeline);
+        cases = Object.values(data.timeline.cases);
+        console.log(cases);
         deaths = data.deaths;
         recovered = data.recovered
         displayCountry = data.country;
@@ -54,7 +56,7 @@ function updateHTML(){
 
 function updateNumbers(){
     nameOfCountry.innerHTML = displayCountry;
-    casesOfCountry.innerHTML = cases.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    casesOfCountry.innerHTML = cases[cases.length -1].toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     recoverOfCountry.innerHTML = recovered.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
     deathOfCountry.innerHTML = deaths.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     // flagOfCountry.innerHTML = `<img src="${flagUrl}"></img>`;
