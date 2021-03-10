@@ -32,13 +32,13 @@ function fetchData(countryName){
     }).then(data => {
         console.log(data);
         console.log(data.timeline);
-        cases = Object.values(data.timeline.cases);
-        console.log(cases);
-        deaths = data.deaths;
-        recovered = data.recovered
+        timeline = data.timeline;
+        cases = Object.values(timeline.cases);
+        deaths = Object.values(timeline.deaths);
+        recovered = Object.values(timeline.recovered);
         displayCountry = data.country;
         // flagUrl = data.countryInfo.flag;
-        population = data.population;
+        // population = data.population;
 
     }).then( () => {
         updateHTML();
@@ -57,8 +57,8 @@ function updateHTML(){
 function updateNumbers(){
     nameOfCountry.innerHTML = displayCountry;
     casesOfCountry.innerHTML = cases[cases.length -1].toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-    recoverOfCountry.innerHTML = recovered.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
-    deathOfCountry.innerHTML = deaths.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    recoverOfCountry.innerHTML = recovered[recovered.length -1].toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+    deathOfCountry.innerHTML = deaths[deaths.length -1].toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     // flagOfCountry.innerHTML = `<img src="${flagUrl}"></img>`;
 
 }
