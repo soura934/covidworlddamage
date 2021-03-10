@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded",() => {
     const deathEle = document.querySelector(".death");
     const recoverEle = document.querySelector(".recover");
     const imgEle = document.querySelector(".img");
+    const canvasEle = document.querySelector(".chart");
 
     function createList(){
         const numberOfCountries = listOfCountries.length;
@@ -35,7 +36,8 @@ document.addEventListener("DOMContentLoaded",() => {
         casesEle.classList.remove("hide");
         deathEle.classList.remove("hide");
         recoverEle.classList.remove("hide");        
-        imgEle.classList.remove("hide");        
+        imgEle.classList.remove("hide");    
+        canvasEle.classList.remove("hide");    
     })
 
     
