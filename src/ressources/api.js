@@ -5,14 +5,14 @@ const casesOfCountry = document.querySelector(".cases .number");
 const deathOfCountry = document.querySelector(".death .number");
 const recoverOfCountry = document.querySelector(".recover .number");
 const flagOfCountry = document.getElementById("flag");
-// const ctx = document.getElementById("graph").getContext("2d");
+const ctx = document.getElementById("graph").getContext("2d");
 
 let dataApp = [],
     cases = [],
     displayCountry = [],
     recovered = [],
     deaths = [],
-    date = [],
+    dates = [],
     // flagUrl = [],
     population = [];
 
@@ -31,12 +31,13 @@ function fetchData(countryName){
         return response.json();
     }).then(data => {
         console.log(data);
-        console.log(data.timeline);
+        console.log(Object.keys(data.timeline.cases));
         timeline = data.timeline;
         cases = Object.values(timeline.cases);
         deaths = Object.values(timeline.deaths);
         recovered = Object.values(timeline.recovered);
         displayCountry = data.country;
+        dates = Object.keys(timeline.cases);
         // flagUrl = data.countryInfo.flag;
         // population = data.population;
 
@@ -63,40 +64,40 @@ function updateNumbers(){
 
 }
 
-// let chart;
-// function updateChart() {
-//     chart = new Chart(ctx, {
-//         type: 'line',
-//         data: {
-//             datasets: [{
-//                 label: 'Total Cases',
-//                 data: cases.toString(),
-//                 fill: false,
-//                 borderColor: 'white',
-//                 backgroundColor:'white',
-//                 borderWidth: 1
-//             },
-//             {
-//                 label: 'Recovered',
-//                 data: recovered.toString(),
-//                 fill: false,
-//                 borderColor: 'green',
-//                 backgroundColor:'green',
-//                 borderWidth: 1
-//             },
-//             {
-//                 label: 'Death',
-//                 data: deaths.toString(),
-//                 fill: false,
-//                 borderColor: 'red',
-//                 backgroundColor:'red',
-//                 borderWidth: 1
-//             }],
-//             labels: population.toString(),
-//         },
-//         options: {
-//             responsive: true,
-//             maintainAspectRatio: false
-//         }
-//     });
-// }
+let chart;
+function updateChart() {
+    chart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            datasets: [{
+                label: 'Total Cases',
+                data: cases,
+                fill: false,
+                borderColor: 'white',
+                backgroundColor:'white',
+                borderWidth: 1
+            },
+            {
+                label: 'Recovered',
+                data: recovered,
+                fill: false,
+                borderColor: 'green',
+                backgroundColor:'green',
+                borderWidth: 1
+            },
+            {
+                label: 'Death',
+                data: deaths,
+                fill: false,
+                borderColor: 'red',
+                backgroundColor:'red',
+                borderWidth: 1
+            }],
+            labels: dates,
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false
+        }
+    });
+}
