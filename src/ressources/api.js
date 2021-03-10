@@ -78,8 +78,8 @@ function updateChart() {
                 label: 'Total Cases',
                 data: cases,
                 fill: false,
-                borderColor: 'white',
-                backgroundColor:'white',
+                borderColor: 'lightblue',
+                backgroundColor:'lightblue',
                 borderWidth: 1
             },
             {
