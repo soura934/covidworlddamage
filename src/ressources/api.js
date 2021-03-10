@@ -25,6 +25,7 @@ listOfCountries.forEach( country => {
 // https://disease.sh/v3/covid-19/countries/${countryName}
 
 function fetchData(countryName){
+    cases = [], recovered = [], deaths = [], dates = [];
     fetch(`https://disease.sh/v3/covid-19/historical/${countryName}`, {
 		"method": "GET"
 	}).then(response => {
@@ -34,6 +35,7 @@ function fetchData(countryName){
         console.log(Object.keys(data.timeline.cases));
         timeline = data.timeline;
         cases = Object.values(timeline.cases);
+        console.log(cases);
         deaths = Object.values(timeline.deaths);
         recovered = Object.values(timeline.recovered);
         displayCountry = data.country;
@@ -44,7 +46,7 @@ function fetchData(countryName){
     }).then( () => {
         updateHTML();
     }).catch( error => {
-        console.log(error);
+        alert(error);
     })
 }
 
@@ -66,6 +68,9 @@ function updateNumbers(){
 
 let chart;
 function updateChart() {
+    if (chart) {
+        chart.destroy();
+    }
     chart = new Chart(ctx, {
         type: 'line',
         data: {
