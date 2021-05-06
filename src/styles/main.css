@@ -99,9 +99,9 @@ footer {
 .personal-sites a img {
     width: 30px;
 }
-.personal-sites a img:hover {
+/* .personal-sites a img:hover {
     filter: hue-rotate(180deg);
-}
+} */
 .personal-sites {
     display: flex;
     justify-content: center;
@@ -110,6 +110,9 @@ footer {
     display: flex;
     justify-content: center;
     color:white
+}
+.my-name:hover{
+    text-decoration: underline;
 }
 .info {
     display: flex;
