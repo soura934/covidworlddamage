@@ -10,13 +10,12 @@ World Covid Stats is an app that shows the number of damage caused by covid arou
 - Webpack to bundle
 
 ## Functionality & MVP
-- The app will show the covid stats of each country of the world
-- The app will contain a graph 
-- The app will provide the number of people who recover from covid around the world
+- The app shows the covid stats of each country of the world
+- The app displays a graph for better visualization
+- The app provides the number of people who recover from covid around the world
 
-## Features
 
-### Search Bar
+## Search Bar
 - Search Bar contains all countries in the word
 - As you start typing letters from a country, suggestions will pop up from the help of the folling code
 ```
@@ -40,10 +39,8 @@ searchField.addEventListener("input", function(){
         })
     })
 ```
+![alt text](https://github.com/soura934/covidworlddamage/blob/main/src/images/search.png)
 
-### Graph
-
-<!-- ![alt text](https://github.com/soura934/covidworlddamage/blob/main/src/images/Frame.png) -->
 
 ## Implementation Timeline
 - Day 1: Research for an API and probably more technology to use like D3.js
