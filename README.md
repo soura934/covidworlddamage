@@ -14,9 +14,13 @@ World Covid Stats is an app that shows the number of damage caused by covid arou
 - The app will contain a graph 
 - The app will provide the number of people who recover from covid around the world
 
-## Wireframe
+## Features
 
-![alt text](https://github.com/soura934/covidworlddamage/blob/main/src/images/Frame.png)
+### Search Bar
+
+### Graph
+
+<!-- ![alt text](https://github.com/soura934/covidworlddamage/blob/main/src/images/Frame.png) -->
 
 ## Implementation Timeline
 - Day 1: Research for an API and probably more technology to use like D3.js
