@@ -17,6 +17,29 @@ World Covid Stats is an app that shows the number of damage caused by covid arou
 ## Features
 
 ### Search Bar
+- Search Bar contains all countries in the word
+- As you start typing letters from a country, suggestions will pop up from the help of the folling code
+```
+document.addEventListener("DOMContentLoaded",() => {
+const searchField = document.getElementById("search-field");
+searchField.addEventListener("input", function(){
+        listCountries.classList.remove("hide");
+    })
+    searchField.addEventListener("input", function(){
+        if (searchField.value === "") {
+            listCountries.classList.toggle("hide");
+        }
+        let value = searchField.value.toUpperCase();
+    
+        listOfCountries.forEach(country => {
+            if (country.name.toUpperCase().startsWith(value)) {
+                document.getElementById(country.name).classList.remove("hide");
+            } else {
+                document.getElementById(country.name).classList.add("hide");
+            }
+        })
+    })
+```
 
 ### Graph
 
